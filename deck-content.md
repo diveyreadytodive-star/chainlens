@@ -17,6 +17,10 @@ BLOCK AI✳26 · 1번 트랙 AI + 블록체인 융합서비스 · 2026-09-12
 
 Ethereum 거래의 자산 이동·권한·수수료를 원본 근거와 연결해 보여주는 AI 거래 해석기.
 
+- GitHub: https://github.com/diveyreadytodive-star/chainlens
+- Web Demo: https://chainlens-lyart.vercel.app/
+- Demo Video: https://youtu.be/6VMEIPlQack
+
 - 일반 웹에서 거래 해시를 선택하고 우클릭하면 빠른 영수증
 - 자세한 사실과 근거는 Chrome 오른쪽 Side Panel
 - Etherscan·Ethereum Blockscout 거래 페이지에서는 아이콘 한 번으로 해석
