@@ -7,7 +7,7 @@
 ## 현재 상태
 
 - 웹 데모: [https://chainlens-lyart.vercel.app](https://chainlens-lyart.vercel.app)에 Vercel production 배포 완료. 로컬 실행도 유지한다.
-- Groq 전용 서버 경로: 구현 및 mock/fallback 검사 완료. `openai/gpt-oss-20b`를 Groq API로 실제 호출해 `AI 용어 해설` 응답과 output guard 통과를 확인했다.
+- Groq 서버 경로: 구현 및 mock/fallback 검사 완료. Vercel production의 암호화 민감 환경변수로 키를 관리하며, `openai/gpt-oss-20b` 실제 호출에서 `AI 용어 해설` 응답과 output guard 통과를 확인했다. preview에는 키를 두지 않는다.
 - Chrome MV3 확장: 우클릭 빠른 영수증, Side Panel, Etherscan·Ethereum Blockscout URL 인식, 입력 fallback, 탭별 상태 공유를 구현했고 실제 Chrome CUA E2E를 마쳤다.
 - E2E 핵심 결과: Approval quick receipt의 당시 1 USDC·실행 성공·rules 설명, 같은 Side Panel 결과, Etherscan 실패의 이동 없음·0.0009579974022 ETH 수수료, Blockscout URL 인식을 확인했다. Blockscout metadata는 한 관측에서 raw units·부분 확인, 다른 재조회에서는 1607 USDC fallback으로 변동했다.
 - 패키지: unpacked 확장 ID efpiaifkcfbiceamcbjaneckaegkmkhp로 설치를 확인했고 dist/chainlens-extension.zip을 생성·재검증했다. extension 검사 14/14 및 문법·ZIP 구조 검사를 통과했다.

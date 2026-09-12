@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-09-12T12:27:15Z",
+  "site": "https://chainlens-lyart.vercel.app",
+  "vercelProject": "momento5/chainlens",
+  "productionEnvironment": {
+    "groqApiKey": "Encrypted",
+    "healthAiConfigured": true,
+    "healthAiMode": "groq"
+  },
+  "previewEnvironment": {
+    "groqApiKey": "not configured",
+    "reason": "Avoid exposing the production secret to unreviewed preview branch code."
+  },
+  "interpretation": {
+    "httpStatus": 200,
+    "transactionStatus": "success",
+    "summary": "1607 USDC이 관측되었습니다.",
+    "explanationMode": "ai",
+    "explanationLabel": "AI 용어 해설",
+    "provider": "Groq"
+  },
+  "responseContainsSecretPattern": false,
+  "browser": {
+    "rulesLabelVisible": false,
+    "llmConnectionReasonVisible": false,
+    "consoleWarningsOrErrors": 0
+  }
+}
