@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ChainLens Chrome 확장 시연용 Ethereum 거래 해시 모음">
+  <title>ChainLens Demo Transactions</title>
+  <link rel="stylesheet" href="/demo-transactions.css">
+  <link rel="stylesheet" href="/demo-fields.css">
+</head>
+<body>
+  <header>
+    <a href="/" aria-label="ChainLens 홈">ChainLens</a>
+    <span>EXTENSION DEMO SET</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">DRAG · RIGHT CLICK · READ</p>
+      <h1>온체인<br>트랜잭션 예시</h1>
+      <p>아래 해시를 드래그한 뒤 우클릭하고 <strong>ChainLens로 Ethereum 거래 해석</strong>을 선택하세요.</p>
+      <div class="notice">사건 맥락은 출처가 설명합니다. ChainLens는 해킹·소각·세탁 의도를 판정하지 않고 거래에서 관측한 이동·승인·수수료만 보여줍니다.</div>
+    </section>
+
+    <section class="cases" aria-label="시연 거래 목록">
+      <article>
+        <div class="case-head"><span>01 · EXPLOIT REFUND</span><b>추천</b></div>
+        <h2>Curve 사건의 2,879 ETH 반환 거래</h2>
+        <p>공격 시도를 선점한 MEV 봇이 수익을 Curve 배포자 주소로 반환한 직접 ETH 전송입니다.</p>
+        <textarea class="hash" rows="2" readonly spellcheck="false" aria-label="Curve 반환 거래 해시">0xb76754124fdde090f25129105ed2907e3c62e0db87ecb8ffcefcb1dede0954fd</textarea>
+        <div class="expected"><strong>ChainLens 관측</strong><span>Native ETH 이동 1건 · 2879.54210353 ETH · Approval 없음</span></div>
+        <a href="https://etherscan.io/tx/0xb76754124fdde090f25129105ed2907e3c62e0db87ecb8ffcefcb1dede0954fd" target="_blank" rel="noopener noreferrer">Etherscan 원본 ↗</a>
+      </article>
+
+      <article>
+        <div class="case-head"><span>02 · PRIVACY CONTRACT</span><b>추천</b></div>
+        <h2>Tornado Cash 컨트랙트에 10 ETH 예치</h2>
+        <p>ETH 이동과 지원 범위 밖의 Deposit 로그가 함께 있는 컨트랙트 상호작용입니다.</p>
+        <textarea class="hash" rows="2" readonly spellcheck="false" aria-label="Tornado Cash 거래 해시">0x4562783a3be39ac2da6d8846af102ce4ec399bb1a12627c21596bdb7f6360212</textarea>
+        <div class="expected"><strong>ChainLens 관측</strong><span>Native ETH 이동 1건 · 10 ETH · 지원 밖 로그 1건</span></div>
+        <a href="https://etherscan.io/tx/0x4562783a3be39ac2da6d8846af102ce4ec399bb1a12627c21596bdb7f6360212" target="_blank" rel="noopener noreferrer">Etherscan 원본 ↗</a>
+      </article>
+
+      <article>
+        <div class="case-head"><span>03 · EXPLOIT TRANSACTION</span><b>추천</b></div>
+        <h2>Euler Finance 플래시론 공격 거래</h2>
+        <p>다수의 토큰 이동, Approval, 지원 밖 로그가 한 거래에 겹쳐 있는 복합 사례입니다.</p>
+        <textarea class="hash" rows="2" readonly spellcheck="false" aria-label="Euler Finance 거래 해시">0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d</textarea>
+        <div class="expected"><strong>ChainLens 관측</strong><span>Transfer 20건 · Approval 2건 · 지원 밖 로그 34건</span></div>
+        <a href="https://etherscan.io/tx/0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d" target="_blank" rel="noopener noreferrer">Etherscan 원본 ↗</a>
+      </article>
+
+      <article class="optional">
+        <div class="case-head"><span>04 · ONCHAIN MESSAGE</span><b>선택</b></div>
+        <h2>Nomad 사건 관련 온체인 메시지</h2>
+        <p>표준 자산 이동 없이 컨트랙트 실행과 수수료만 관측되는 사례입니다.</p>
+        <textarea class="hash" rows="2" readonly spellcheck="false" aria-label="Nomad 거래 해시">0xebfe4cc2a1e1746f13280b6bb4d737638e43dc710cfb05b63bfb6163d03e8830</textarea>
+        <div class="expected"><strong>ChainLens 관측</strong><span>자산 이동 없음 · Approval 없음 · 컨트랙트 실행과 수수료 확인</span></div>
+        <a href="https://etherscan.io/tx/0xebfe4cc2a1e1746f13280b6bb4d737638e43dc710cfb05b63bfb6163d03e8830" target="_blank" rel="noopener noreferrer">Etherscan 원본 ↗</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

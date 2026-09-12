@@ -27,6 +27,9 @@ const staticFiles = new Map([
   ['/app.js', ['app.js', 'text/javascript; charset=utf-8']],
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/landing.css', ['landing.css', 'text/css; charset=utf-8']],
+  ['/demo-transactions.html', ['demo-transactions.html', 'text/html; charset=utf-8']],
+  ['/demo-transactions.css', ['demo-transactions.css', 'text/css; charset=utf-8']],
+  ['/demo-fields.css', ['demo-fields.css', 'text/css; charset=utf-8']],
   ['/downloads/chainlens-extension.zip', ['downloads/chainlens-extension.zip', 'application/zip']]
 ]);
 
