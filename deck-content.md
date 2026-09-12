@@ -7,7 +7,7 @@ BLOCK AI✳26 · 1번 트랙 AI + 블록체인 융합서비스 · 2026-09-12
 공통 사실 표기:
 
 - Chrome Manifest V3 확장과 검증 ZIP은 구현됐다.
-- app 검사 26/26, extension 검사 14/14·문법·ZIP 구조 검사는 통과했다.
+- app 검사 28/28, extension 검사 14/14·문법·ZIP 구조 검사는 통과했다.
 - `openai/gpt-oss-20b`를 Groq API로 실제 호출해 AI 설명과 guard 통과를 확인했다. 키 없음·HTTP 오류·검사 실패의 rules fallback도 검증했다.
 - 실제 Chrome unpacked 설치 E2E는 완료했다. OS 전면창 불일치로 생긴 잘못된 PNG는 제거했으므로 보존된 확장 PNG는 없다.
 
@@ -120,7 +120,7 @@ Ethereum 거래의 자산 이동·권한·수수료를 원본 근거와 연결�
 - 호출·JSON·guard 실패 시 규칙 기반 설명 라벨
 - AI 출력은 전체 의미 정확성을 증명하지 않음
 
-검증 상태: Groq mock 성공·HTTP 오류·timeout·잘못된 JSON·guard 실패 fallback과 metadata fallback을 포함한 app 26/26 테스트 통과. `openai/gpt-oss-20b` 실제 Groq 호출에서 AI 모드·guard 통과 확인.
+검증 상태: Groq mock 성공·HTTP 오류·timeout·잘못된 JSON·guard 실패 fallback, metadata fallback과 Vercel handler를 포함한 app 28/28 테스트 통과. `openai/gpt-oss-20b` 실제 Groq 호출에서 AI 모드·guard 통과 확인.
 
 ## 8. 첫 목표는 사용자가 거래를 정확히 설명하게 만드는 것입니다
 
@@ -143,10 +143,10 @@ Ethereum 거래의 자산 이동·권한·수수료를 원본 근거와 연결�
 
 | 시점 | 개발 목표·완료 기준 |
 |---|---|
-| 현재 | 웹 MVP, Groq 전용 서버 경로, MV3 확장, ZIP, app 26/26·extension 14/14, Chrome CUA E2E |
+| 현재 | Vercel 웹 데모, Groq 전용 서버 경로, MV3 확장, ZIP, app 28/28·extension 14/14, Chrome CUA E2E |
 | 다음 검증 | 키 있는 Groq 장애의 실제 Chrome UI, 필요 시 정확한 전면창 확장 화면 캡처 |
 | 사용자 검증 | 초보자 이해도 비교와 원본 근거 찾기 성공률 측정 |
-| 공개 전 | 공개 링크·영상 여부 별도 확인 |
+| 공개 전 | 영상·신청 여부 별도 확인 |
 
 | 역할 | 담당 범위·사용 스택 |
 |---|---|
@@ -159,13 +159,14 @@ Ethereum 거래의 자산 이동·권한·수수료를 원본 근거와 연결�
 
 | 확인 항목 | 현재 근거 |
 |---|---|
-| 웹 앱 해석·Groq fallback | app 26/26 테스트, 기존 실제 RPC 4건 기록 |
+| 웹 앱 해석·Groq fallback | app 28/28 테스트, 기존 실제 RPC 4건 기록 |
 | 확장 구조·권한·보안 경계 | extension 14/14, 문법·ZIP 검사 |
 | 확장 배포물 | dist/chainlens-extension.zip 생성 및 구조 검사 |
 | Groq live | `openai/gpt-oss-20b` 실제 호출, AI 모드·guard 통과 확인 |
 | 실제 Chrome E2E | unpacked 설치·우클릭·Side Panel·Etherscan·Blockscout 자동 인식 CUA 확인 |
 | 실제 화면 | screenshots/는 기존 웹 MVP 5장. CUA E2E는 완료했지만 보존된 확장 PNG 없음 |
-| 공개 링크·영상·신청 | 미실행 |
+| 공개 링크 | https://chainlens-lyart.vercel.app 배포·비로그인 확인 |
+| 영상·신청 | 미실행 |
 
 레퍼런스:
 

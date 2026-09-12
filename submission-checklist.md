@@ -6,7 +6,7 @@
 
 | 항목 | 위치 | 현재 상태 |
 |---|---|---|
-| 로컬 웹 MVP | app/ | 구현됨; npm run check 26/26 통과 |
+| 공개 웹 데모 | https://chainlens-lyart.vercel.app | Vercel production 배포; npm run check 28/28 통과 |
 | Groq 전용 AI 경로 | app/lib/ai.mjs | 구현됨; mock·fallback 및 `openai/gpt-oss-20b` live API 성공 확인 |
 | unpacked MV3 확장 | extension/ | 구현됨; 실제 Chrome CUA E2E 완료 |
 | 검증 ZIP | dist/chainlens-extension.zip | 생성 및 ZIP 구조 검사 완료 |
@@ -19,12 +19,12 @@
 
 ## 출시 전 기술 확인
 
-- [x] 확장 manifest가 activeTab, contextMenus, scripting, sidePanel, storage와 localhost API host만 요청한다.
+- [x] 확장 manifest가 activeTab, contextMenus, scripting, sidePanel, storage와 정확한 production API host만 요청한다.
 - [x] <all_urls>, 지갑 접근, 원격 실행 코드가 없다.
 - [x] API 키 literal, dynamic HTML sink, 원격 executable source 부재를 정적 검사했다.
 - [x] 선택 텍스트·링크·탐색기 URL을 엄격히 검증하는 코드를 구현했다.
 - [x] Groq에는 safeFacts만 보내고 오류·timeout·출력 guard 실패 시 rules fallback을 구현·검사했다.
-- [x] CORS는 localhost 및 명시적으로 구성한 chrome-extension Origin만 허용하도록 구현·검사했다.
+- [x] 로컬 CORS와 production의 same-origin·유효 Chrome extension Origin 처리를 구현·검사했다.
 - [x] ZIP을 다시 열어 manifest와 모든 로컬 리소스를 확인했다.
 - [x] Chrome에서 extension/을 unpacked로 로드했다. 검증 ID는 efpiaifkcfbiceamcbjaneckaegkmkhp다.
 - [x] 확장 ID Origin을 넣은 서버와 CORS 경로를 실제 E2E에 사용했다.
@@ -50,7 +50,7 @@
 
 ## 명시적으로 수행하지 않는 작업
 
-- [ ] 공개 배포
+- [x] Vercel 공개 배포
 - [ ] Chrome Web Store 등록
 - [ ] Git 커밋·푸시·병합
 - [ ] 시연 영상 촬영·업로드

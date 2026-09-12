@@ -52,4 +52,4 @@ Chrome E2E에서 Approval과 실패 흐름은 실제로 확인했다. Blockscout
 
 ## 공개 상태
 
-시연 대본은 작성됐다. 실제 Chrome E2E CUA 시각 검증은 완료했고 상세 기록은 evidence/extension-chrome-e2e.md에 있다. 보존된 확장 PNG, 영상 촬영·업로드, 공개 개발증빙 URL, Chrome Web Store 등록, 신청서 최종 제출은 미실행이다.
+시연 대본은 작성됐다. 실제 Chrome E2E CUA 시각 검증은 완료했고 상세 기록은 evidence/extension-chrome-e2e.md에 있다. 공개 웹 데모는 https://chainlens-lyart.vercel.app 에 배포했다. 보존된 확장 PNG, 영상 촬영·업로드, Chrome Web Store 등록, 신청서 최종 제출은 미실행이다.

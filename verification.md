@@ -6,7 +6,7 @@
 
 ### 앱과 Groq 경로
 
-app에서 npm run check를 실행해 26/26 테스트와 문법 검사를 통과했다.
+app에서 npm run check를 실행해 28/28 테스트와 문법 검사를 통과했다. 추가된 검사는 Vercel health·examples handler와 interpret 입력·Origin·preflight 계약을 포함한다.
 
 | 검사 범위 | 결과 |
 |---|---|
@@ -27,7 +27,7 @@ extension에서 npm run check를 실행해 14/14 테스트와 문법 검사를 �
 | 검사 범위 | 결과 |
 |---|---|
 | 해시·지원 탐색기 URL 파서 | 통과 |
-| manifest 최소 권한: activeTab, contextMenus, scripting, sidePanel, storage 및 localhost API host | 통과 |
+| manifest 최소 권한: activeTab, contextMenus, scripting, sidePanel, storage 및 정확한 production API host | 통과 |
 | source의 dynamic HTML sink, API-key literal, 원격 실행 source 부재 | 통과 |
 | service worker·core·content·side panel JavaScript 문법 검사 | 통과 |
 | loading→result/error, selection/link 우선순위, stale operation 차단, invalid 입력 시 이전 결과 숨김 | 통과 |
@@ -79,7 +79,8 @@ OS 전면창 불일치로 저장된 PNG가 실제 확장 화면을 담지 못했
 | 보존된 확장 PNG | 없음 | CUA 시각 검증 완료. 전면창 오류 PNG는 제거됨 |
 | Groq live | 완료 | `openai/gpt-oss-20b` 실제 호출에서 AI 모드·guard 통과·키 비저장 확인 |
 | PPTX/PDF 최신 상태 | 완료 | slides/의 최종 파일 10장/10쪽을 개별 렌더 검수. 한글 깨짐·잘림·겹침 없음. PowerPoint 데스크톱은 미검사 |
-| 공개 배포·Web Store·영상·신청 | 미실행 | 이 목표의 범위 밖; 수행하지 않음 |
+| Vercel 공개 배포 | 완료 | https://chainlens-lyart.vercel.app 비로그인 접속, health·examples·ZIP 다운로드 확인 |
+| Web Store·영상·신청 | 미실행 | 별도 후속 범위 |
 
 ## 해석과 보안의 한계
 
