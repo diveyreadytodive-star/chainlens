@@ -87,12 +87,17 @@ export function createInterpreterService({
     const cached = cache.get(hash);
     if (cached && Date.now() - cached.time < 15000) return {...cached.data, source: {...cached.data.source, cached: true}};
     let sawNull = false;
+    let sawMinedTransactionWithoutReceipt = false;
     for (const endpoint of rpcEndpoints) {
       try {
         const chain = await rpc(endpoint, 'eth_chainId');
         if (chain !== '0x1') throw new Error('RPC chain mismatch');
         const [transaction, receipt] = await Promise.all([rpc(endpoint, 'eth_getTransactionByHash', [hash]), rpc(endpoint, 'eth_getTransactionReceipt', [hash])]);
         if (!transaction) { sawNull = true; continue; }
+        if (!receipt && transaction.blockNumber) {
+          sawMinedTransactionWithoutReceipt = true;
+          continue;
+        }
         const metadataProviders = [endpoint, ...rpcEndpoints.filter(candidate => candidate !== endpoint)];
         const [block, finalized, metadata] = await Promise.allSettled([rpc(endpoint, 'eth_blockNumber'), rpc(endpoint, 'eth_getBlockByNumber', ['finalized', false]), tokenMetadata(metadataProviders, receipt, rpc)]);
         const data = {hash, transaction, receipt, metadata: metadata.status === 'fulfilled' ? metadata.value : {}, blockNumber: block.status === 'fulfilled' ? block.value : null, finalizedBlockNumber: finalized.status === 'fulfilled' ? finalized.value?.number : null, source: {mode: 'live', provider: rpcProviderLabel(endpoint, configuredRpc), fetchedAt: new Date().toISOString()}};
@@ -101,6 +106,7 @@ export function createInterpreterService({
         return data;
       } catch { /* Public RPC failures are isolated; configured secrets are never logged. */ }
     }
+    if (sawMinedTransactionWithoutReceipt) throw new Error('RPC_UNAVAILABLE');
     if (sawNull) return {hash, transaction: null, receipt: null, source: {mode: 'live', provider: 'Ethereum RPC', fetchedAt: new Date().toISOString()}};
     throw new Error('RPC_UNAVAILABLE');
   };

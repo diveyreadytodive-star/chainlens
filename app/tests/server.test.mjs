@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import http from 'node:http';
 import {TRANSFER_TOPIC} from '../lib/interpreter.mjs';
 import {createServer, configuredExtensionOrigins, rpcProviderLabel, tokenMetadata} from '../server.mjs';
+import {createInterpreterService} from '../lib/service.mjs';
 
 function start(service) {
   return new Promise((resolve, reject) => {
@@ -126,4 +127,27 @@ test('metadata uses parallel providers and returns within its total time budget'
   const exhaustedAt = Date.now();
   const exhausted = await tokenMetadata(['https://slow.example'], receipt, async () => new Promise(() => {}), {timeoutMs: 25});
   assert.deepEqual(exhausted[token], {decimals: null, symbol: null});assert.ok(Date.now() - exhaustedAt < 100);
+});
+
+test('mined transactions with a missing receipt fall back to another RPC', async () => {
+  const hash = `0x${'7'.repeat(64)}`;
+  const first = 'https://first.example';
+  const second = 'https://second.example';
+  const transaction = {hash, from: `0x${'1'.repeat(40)}`, to: `0x${'2'.repeat(40)}`, value: '0x1', input: '0x', blockNumber: '0x10'};
+  const receipt = {transactionHash: hash, status: '0x1', blockNumber: '0x10', gasUsed: '0x5208', effectiveGasPrice: '0x1', logs: []};
+  const fetchImpl = async (endpoint, options) => {
+    const {method} = JSON.parse(options.body);
+    let result;
+    if (method === 'eth_chainId') result = '0x1';
+    else if (method === 'eth_getTransactionByHash') result = transaction;
+    else if (method === 'eth_getTransactionReceipt') result = endpoint === first ? null : receipt;
+    else if (method === 'eth_blockNumber') result = '0x20';
+    else if (method === 'eth_getBlockByNumber') result = {number: '0x10'};
+    else throw new Error(`unexpected method ${method}`);
+    return new Response(JSON.stringify({jsonrpc: '2.0', id: 1, result}), {status: 200, headers: {'content-type': 'application/json'}});
+  };
+  const service = createInterpreterService({rpcEndpoints: [first, second], fetchImpl});
+  const facts = await service.interpret({input: hash});
+  assert.equal(facts.status, 'success');
+  assert.equal(facts.source.provider, 'second.example');
 });

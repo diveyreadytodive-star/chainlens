@@ -112,6 +112,8 @@ test('AI guard rejects numeric/address changes and explicit state contradictions
   assert.equal(validateExplanation('토큰이 0x123 주소로 전송되었습니다.'),false);
   assert.equal(validateExplanation('거래가 성공하여 전송이 완료되었습니다.',{status:'failed'}),false);
   assert.equal(validateExplanation('토큰이 받는 주소로 전송되었습니다.',{category:'approval',transfers:[]}),false);
+  assert.equal(validateExplanation('이 거래에서는 토큰이 전송되었습니다.',{transfers:[{type:'native'}]}),false);
+  assert.equal(validateExplanation('승인 한도 내에서 토큰이 이동되었습니다.',{approvals:[{}],transfers:[{type:'transfer'}]}),false);
   assert.equal(validateExplanation('이 거래는 토큰의 사용 권한을 설정합니다. 이 설정은 토큰 전송과 구분됩니다.'),true);
 });
 
@@ -133,7 +135,7 @@ test('Groq success uses the default model and only categorical facts', async () 
       return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({text:'전송 값과 네트워크 수수료는 구분됩니다. 실행 결과는 영수증에서 확인할 수 있습니다.'})}}]}),{status:200});
     }});
     assert.equal(result.mode,'ai');assert.equal(result.provider,'Groq');assert.equal(request.url,'https://api.groq.com/openai/v1/chat/completions');
-    const body=JSON.parse(request.options.body);assert.equal(body.model,'openai/gpt-oss-20b');assert.deepEqual(JSON.parse(body.messages[1].content),{status:'success',category:'eth_transfer',hasTransfers:false,hasApprovals:false,hasUnsupportedLogs:false,finality:'included'});
+    const body=JSON.parse(request.options.body);assert.equal(body.model,'openai/gpt-oss-20b');assert.deepEqual(JSON.parse(body.messages[1].content),{status:'success',category:'eth_transfer',hasTransfers:false,hasNativeTransfer:false,hasTokenTransfers:false,hasApprovals:false,hasUnsupportedLogs:false,finality:'included'});
   } finally { if (previous === undefined) delete process.env.GROQ_API_KEY; else process.env.GROQ_API_KEY=previous; }
 });
 

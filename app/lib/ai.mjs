@@ -9,6 +9,8 @@ export function validateExplanation(text, facts) {
   if (facts?.status === 'failed' && /성공|완료|이동했|전송됐|전송되었|설정됐|설정되었/.test(text)) return false;
   if (facts?.status === 'pending' && /성공|완료|실패했|이동했|설정됐|설정되었|확정됐|확정되었/.test(text)) return false;
   if (facts?.category === 'approval' && !facts.transfers?.length && /전송했|전송됐|전송되었|이동했|이동됐|이동되었/.test(text)) return false;
+  if (facts?.transfers?.length && facts.transfers.every(transfer => transfer.type === 'native') && /토큰/.test(text)) return false;
+  if (facts?.approvals?.length && facts.transfers?.length && /승인.{0,24}(한도|범위).{0,24}(전송|이동)|(?:전송|이동).{0,24}승인.{0,24}(한도|범위)/.test(text)) return false;
   return true;
 }
 
@@ -21,6 +23,8 @@ function safeFactsFor(facts) {
     status: facts.status,
     category: facts.category,
     hasTransfers: facts.transfers.length > 0,
+    hasNativeTransfer: facts.transfers.some(transfer => transfer.type === 'native'),
+    hasTokenTransfers: facts.transfers.some(transfer => transfer.type !== 'native'),
     hasApprovals: facts.approvals.length > 0,
     hasUnsupportedLogs: facts.unsupportedLogCount > 0,
     finality: facts.finality.state
@@ -29,7 +33,7 @@ function safeFactsFor(facts) {
 
 function promptFor(safeFacts) {
   return [
-    {role: 'system', content: '너는 초보자용 한국어 블록체인 용어 설명기다. 주어진 분류와 상태만 근거로 짧은 두 문장의 교육적 해설을 작성한다. 사실 요약과 숫자는 별도 화면이 담당한다. 숫자, 수량, 가격, 주소, 토큰 이름을 절대로 생성하지 않는다. 자금 안전성, 의도 달성, 현재 승인 한도, 전체 잔액 변화를 판단하지 않는다. approve는 전송과 구분하며 당시 한도 설정임을 설명한다. 실패는 상태 변경이 되돌려진 것으로 설명한다. 스왑을 추정하지 않는다. 출력 JSON은 {"text":"한국어 해설"}만 허용한다.'},
+    {role: 'system', content: '너는 초보자용 한국어 블록체인 용어 설명기다. 주어진 분류와 상태만 근거로 짧은 두 문장의 교육적 해설을 작성한다. 사실 요약과 숫자는 별도 화면이 담당한다. 숫자, 수량, 가격, 주소, 토큰 이름을 절대로 생성하지 않는다. 자금 안전성, 의도 달성, 현재 승인 한도, 전체 잔액 변화를 판단하지 않는다. native transfer는 ETH 이동으로만 설명하고 토큰이라고 부르지 않는다. approve는 전송과 구분하며 당시 한도 설정임을 설명한다. Approval과 Transfer가 함께 있어도 승인 한도가 전송에 사용되었다거나 둘 사이의 인과관계를 추정하지 않는다. 실패는 상태 변경이 되돌려진 것으로 설명한다. 스왑·브리지·해킹·공격·세탁·계약 함수의 의도를 추정하지 않는다. 출력 JSON은 {"text":"한국어 해설"}만 허용한다.'},
     {role: 'user', content: JSON.stringify(safeFacts)}
   ];
 }
