@@ -52,9 +52,8 @@ function renderFacts(facts) {
   addAddress(overview, '받는 주소', facts.to);
   if (facts.explanation?.text) {
     const ai = document.createElement('div'); ai.className = 'explanation';
-    add(ai, 'strong', text(facts.explanation.label, '규칙 기반 설명'));
+    add(ai, 'strong', text(facts.explanation.label, '거래 용어 해설'));
     add(ai, 'p', facts.explanation.text);
-    if (facts.explanation.reason) add(ai, 'p', facts.explanation.reason, 'muted');
     overview.append(ai);
   }
   const movements = section(result, '관측한 자산 이동');

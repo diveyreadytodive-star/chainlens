@@ -60,7 +60,7 @@ function validPayload(overrides = {}) {
     evidence: [{ id: 'transaction', label: '거래 원본', url: `https://etherscan.io/tx/${HASH}`, fields: ['transaction.from'] }],
     transfers: [{ type: 'native', from: `0x${'1'.repeat(40)}`, to: `0x${'2'.repeat(40)}`, amount: '1', amountUnit: 'ETH', rawAmount: '1000000000000000000', direction: '관측', metadataVerified: true }],
     limitations: ['지원 범위 안에서 확인한 결과입니다.'],
-    explanation: { label: '규칙 기반 설명', text: '설명입니다.', cached: false },
+    explanation: { label: '거래 용어 해설', text: '설명입니다.', cached: false },
     ...overrides
   };
 }

@@ -141,7 +141,7 @@ function render(state) {
   if (explanation?.text) {
     const explanationBox = document.createElement('div');
     explanationBox.className = 'chainlens-explanation';
-    append(explanationBox, 'span', text(explanation.label, '규칙 기반 설명'), 'chainlens-label');
+    append(explanationBox, 'span', text(explanation.label, '거래 용어 해설'), 'chainlens-label');
     append(explanationBox, 'p', explanation.text);
     receipt.append(explanationBox);
   }

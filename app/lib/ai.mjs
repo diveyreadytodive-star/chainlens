@@ -13,7 +13,7 @@ export function validateExplanation(text, facts) {
 }
 
 function fallback(facts, reason) {
-  return {mode: 'rules', label: '규칙 기반 설명', text: ruleExplanation(facts), reason};
+  return {mode: 'rules', label: '거래 용어 해설', text: ruleExplanation(facts), reason};
 }
 
 function safeFactsFor(facts) {
