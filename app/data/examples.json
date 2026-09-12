@@ -1,0 +1,252 @@
+{
+  "examples": [
+    {
+      "id": "erc20-transfer",
+      "kind": "erc20-transfer",
+      "label": "ERC-20 전송",
+      "hash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "source": "https://ethereum-rpc.publicnode.com",
+      "fetchedAt": "2026-09-12T03:55:25.187Z",
+      "transaction": {
+        "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+        "blockNumber": "0x18c1974",
+        "blockTimestamp": "0x6aa4cd1f",
+        "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+        "gas": "0xb1e4",
+        "gasPrice": "0x3cfce77",
+        "maxFeePerGas": "0x746a528800",
+        "maxPriorityFeePerGas": "0x673b14",
+        "hash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+        "input": "0xa9059cbb0000000000000000000000005fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa000000000000000000000000000000000000000000000000000000005fc8dfc0",
+        "nonce": "0xe77ad",
+        "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "transactionIndex": "0x6a",
+        "value": "0x0",
+        "type": "0x2",
+        "accessList": [],
+        "chainId": "0x1",
+        "v": "0x1",
+        "r": "0xd6d00c275f19e0e7d1580914085e266eb1272ce5ef0363f8efac84d4e64ea4",
+        "s": "0x2b0bd1d00f2b6dfd2f0812601fc86ab50a8506cd93e94e18bee4e2c971ec0e8",
+        "yParity": "0x1"
+      },
+      "receipt": {
+        "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+        "blockNumber": "0x18c1974",
+        "contractAddress": null,
+        "cumulativeGasUsed": "0xe19f02",
+        "effectiveGasPrice": "0x3cfce77",
+        "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+        "gasUsed": "0xb068",
+        "logs": [
+          {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000bbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+              "0x0000000000000000000000005fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa"
+            ],
+            "data": "0x000000000000000000000000000000000000000000000000000000005fc8dfc0",
+            "blockNumber": "0x18c1974",
+            "transactionHash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+            "transactionIndex": "0x6a",
+            "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+            "blockTimestamp": "0x6aa4cd1f",
+            "logIndex": "0x12d",
+            "removed": false
+          }
+        ],
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000008000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000010000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000002000400000000000000000000000000000000000000000000800400000000000000002000000000000000000000000000000000000000000000000002",
+        "status": "0x1",
+        "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "transactionHash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+        "transactionIndex": "0x6a",
+        "type": "0x2"
+      },
+      "blockNumber": "0x18c1974",
+      "finalizedBlockNumber": "0x18c192e",
+      "metadata": {
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+          "decimals": 6,
+          "symbol": "USDC",
+          "source": "https://ethereum-rpc.publicnode.com",
+          "blockTag": "0x18c1974"
+        }
+      }
+    },
+    {
+      "id": "eth-transfer",
+      "kind": "eth-transfer",
+      "label": "ETH 전송",
+      "hash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "source": "https://ethereum-rpc.publicnode.com",
+      "fetchedAt": "2026-09-12T03:52:34.856Z",
+      "transaction": {
+        "accessList": [],
+        "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+        "blockNumber": "0x18c1964",
+        "blockTimestamp": "0x6aa4cc5f",
+        "chainId": "0x1",
+        "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+        "gas": "0x33450",
+        "gasPrice": "0x7c13dc1d",
+        "hash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+        "input": "0x",
+        "maxFeePerGas": "0x74e2f65200",
+        "maxPriorityFeePerGas": "0x78a3ca00",
+        "nonce": "0x56ce",
+        "r": "0x67eb7b1aa4bc6f34bafbcd2a2cac9862112b3e130eaa43bcd3abf7e79cb64317",
+        "s": "0x363c3fe1000c1e066229ebba8e0528de24c7998c1aea0c899f16cbc5b4a8eee7",
+        "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+        "transactionIndex": "0x5",
+        "type": "0x2",
+        "v": "0x0",
+        "value": "0x26c44edbd7b026000",
+        "yParity": "0x0"
+      },
+      "receipt": {
+        "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+        "blockNumber": "0x18c1964",
+        "contractAddress": null,
+        "cumulativeGasUsed": "0x88330",
+        "effectiveGasPrice": "0x7c13dc1d",
+        "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+        "gasUsed": "0x5208",
+        "logs": [],
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "status": "0x1",
+        "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+        "transactionHash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+        "transactionIndex": "0x5",
+        "type": "0x2"
+      },
+      "blockNumber": "0x18c1966",
+      "finalizedBlockNumber": "0x18c190f",
+      "metadata": {}
+    },
+    {
+      "id": "approval",
+      "kind": "approval",
+      "label": "토큰 사용 승인",
+      "hash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "source": "https://ethereum-rpc.publicnode.com",
+      "fetchedAt": "2026-09-12T03:55:19.598Z",
+      "transaction": {
+        "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+        "blockNumber": "0x18c1972",
+        "blockTimestamp": "0x6aa4cd07",
+        "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+        "gas": "0x107db",
+        "gasPrice": "0x5c05f13",
+        "maxFeePerGas": "0x69524d4",
+        "maxPriorityFeePerGas": "0x2794d36",
+        "hash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+        "input": "0x095ea7b30000000000000000000000000000000000001ff3684f28c67538d4d072c2273400000000000000000000000000000000000000000000000000000000000f4240",
+        "nonce": "0x182",
+        "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "transactionIndex": "0x73",
+        "value": "0x0",
+        "type": "0x2",
+        "accessList": [],
+        "chainId": "0x1",
+        "v": "0x1",
+        "r": "0xfb0bd40e9948fff7332726494faed85776ea9156cd55e6ac306c9f41b7132da7",
+        "s": "0x6babe5b7114f9652f3c501bddb26ca6b1b6130c03ac38a7d14263b70a69aa82f",
+        "yParity": "0x1"
+      },
+      "receipt": {
+        "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+        "blockNumber": "0x18c1972",
+        "contractAddress": null,
+        "cumulativeGasUsed": "0xe4a0ac",
+        "effectiveGasPrice": "0x5c05f13",
+        "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+        "gasUsed": "0xd8be",
+        "logs": [
+          {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "topics": [
+              "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+              "0x00000000000000000000000004940c3800275fe84f615ab07bc723eaa9a1a00f",
+              "0x0000000000000000000000000000000000001ff3684f28c67538d4d072c22734"
+            ],
+            "data": "0x00000000000000000000000000000000000000000000000000000000000f4240",
+            "blockNumber": "0x18c1972",
+            "transactionHash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+            "transactionIndex": "0x73",
+            "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+            "blockTimestamp": "0x6aa4cd07",
+            "logIndex": "0x1b7",
+            "removed": false
+          }
+        ],
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000008000000001000000000000000000000000000000000000000000000000000400000000008000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000100000000000020000000000200000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000010000010000000000000000000000000000000000000000000000000000000",
+        "status": "0x1",
+        "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "transactionHash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+        "transactionIndex": "0x73",
+        "type": "0x2"
+      },
+      "blockNumber": "0x18c1974",
+      "finalizedBlockNumber": "0x18c192e",
+      "metadata": {
+        "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+          "decimals": 6,
+          "symbol": "USDC",
+          "source": "https://ethereum-rpc.publicnode.com",
+          "blockTag": "0x18c1972"
+        }
+      }
+    },
+    {
+      "id": "failed",
+      "kind": "failed",
+      "label": "실패와 수수료",
+      "hash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "source": "https://ethereum-rpc.publicnode.com",
+      "fetchedAt": "2026-09-12T03:52:35.206Z",
+      "transaction": {
+        "accessList": [],
+        "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+        "blockNumber": "0x18c1964",
+        "blockTimestamp": "0x6aa4cc5f",
+        "chainId": "0x1",
+        "from": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+        "gas": "0xdbba0",
+        "gasPrice": "0x3f7216d6",
+        "hash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+        "input": "0xa9059cbb0000000000000000000000005015d7c947b782670d1fac71b749a5ba54ca9a450000000000000000000000000000000000000000000000000000000070b65ec0",
+        "maxFeePerGas": "0x3f7216d6",
+        "maxPriorityFeePerGas": "0x3f7216d6",
+        "nonce": "0x39",
+        "r": "0xeab0fec1be74ec08bef48c4f8477101e23d20e92163453a92a16af1f388b1644",
+        "s": "0x2397152beeaa777b0c3f1053e3686fb434fff96aeaad3ccd3c565cbeea319d9b",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "transactionIndex": "0x3e",
+        "type": "0x2",
+        "v": "0x1",
+        "value": "0x0",
+        "yParity": "0x1"
+      },
+      "receipt": {
+        "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+        "blockNumber": "0x18c1964",
+        "contractAddress": null,
+        "cumulativeGasUsed": "0x5a8cdb",
+        "effectiveGasPrice": "0x3f7216d6",
+        "from": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+        "gasUsed": "0xdbba0",
+        "logs": [],
+        "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "status": "0x0",
+        "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        "transactionHash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+        "transactionIndex": "0x3e",
+        "type": "0x2"
+      },
+      "blockNumber": "0x18c1966",
+      "finalizedBlockNumber": "0x18c190f",
+      "metadata": {}
+    }
+  ]
+}

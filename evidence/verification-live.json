@@ -1,0 +1,383 @@
+{
+  "verifiedAt": "2026-09-12T04:04:41.967Z",
+  "health": {
+    "ok": true,
+    "chain": "ethereum",
+    "aiConfigured": true,
+    "aiMode": "local-codex-cli",
+    "rpcProviders": [
+      "ethereum-rpc.publicnode.com",
+      "eth.drpc.org",
+      "cloudflare-eth.com"
+    ],
+    "version": "0.1.0"
+  },
+  "checks": [
+    {
+      "name": "health",
+      "pass": true,
+      "detail": {
+        "ok": true,
+        "chain": "ethereum",
+        "aiConfigured": true,
+        "aiMode": "local-codex-cli",
+        "rpcProviders": [
+          "ethereum-rpc.publicnode.com",
+          "eth.drpc.org",
+          "cloudflare-eth.com"
+        ],
+        "version": "0.1.0"
+      }
+    },
+    {
+      "name": "erc20-transfer:http",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "erc20-transfer:live",
+      "pass": true,
+      "detail": {
+        "mode": "live",
+        "provider": "ethereum-rpc.publicnode.com",
+        "fetchedAt": "2026-09-12T04:04:03.966Z"
+      }
+    },
+    {
+      "name": "erc20-transfer:hash",
+      "pass": true,
+      "detail": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db"
+    },
+    {
+      "name": "erc20-transfer:status",
+      "pass": true,
+      "detail": "success"
+    },
+    {
+      "name": "erc20-transfer:fee",
+      "pass": true,
+      "detail": {
+        "expected": "0.0000028880025478",
+        "actual": "0.0000028880025478"
+      }
+    },
+    {
+      "name": "erc20-transfer:ai",
+      "pass": true,
+      "detail": {
+        "mode": "ai",
+        "label": "로컬 Codex · 실제 AI 해설",
+        "text": "토큰 전송은 블록체인에서 토큰을 다른 계정으로 보내는 동작이에요. 이 거래는 블록에 포함되어 성공으로 처리되었어요.",
+        "provider": "local-codex-cli",
+        "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+        "generatedAt": "2026-09-12T04:04:12.522Z",
+        "cached": false
+      }
+    },
+    {
+      "name": "token amount",
+      "pass": true,
+      "detail": {
+        "type": "transfer",
+        "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+        "to": "0x5fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa",
+        "rawAmount": "1607000000",
+        "logIndex": 301,
+        "symbol": "USDC",
+        "decimals": 6,
+        "amount": "1607",
+        "amountUnit": "USDC",
+        "metadataVerified": true,
+        "direction": "나감",
+        "evidenceId": "log-301",
+        "unlimited": false
+      }
+    },
+    {
+      "name": "token destination",
+      "pass": true,
+      "detail": "0x5fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa"
+    },
+    {
+      "name": "eth-transfer:http",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "eth-transfer:live",
+      "pass": true,
+      "detail": {
+        "mode": "live",
+        "provider": "ethereum-rpc.publicnode.com",
+        "fetchedAt": "2026-09-12T04:04:13.599Z"
+      }
+    },
+    {
+      "name": "eth-transfer:hash",
+      "pass": true,
+      "detail": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115"
+    },
+    {
+      "name": "eth-transfer:status",
+      "pass": true,
+      "detail": "success"
+    },
+    {
+      "name": "eth-transfer:fee",
+      "pass": true,
+      "detail": {
+        "expected": "0.000043715202657",
+        "actual": "0.000043715202657"
+      }
+    },
+    {
+      "name": "eth-transfer:ai",
+      "pass": true,
+      "detail": {
+        "mode": "ai",
+        "label": "로컬 Codex · 실제 AI 해설",
+        "text": "기본 자산 전송은 네트워크의 기본 자산을 다른 계정으로 보내는 작업이에요. 성공 상태로 블록에 포함되었다는 것은 실행이 완료되어 기록되었다는 뜻이며, 최종 확정과는 구분돼요.",
+        "provider": "local-codex-cli",
+        "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+        "generatedAt": "2026-09-12T04:04:25.298Z",
+        "cached": false
+      }
+    },
+    {
+      "name": "native raw value",
+      "pass": true,
+      "detail": {
+        "type": "native",
+        "symbol": "ETH",
+        "amount": "44.69511",
+        "amountUnit": "ETH",
+        "rawAmount": "44695110000000000000",
+        "decimals": 18,
+        "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+        "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+        "direction": "나감",
+        "evidenceId": "transaction",
+        "metadataVerified": true
+      }
+    },
+    {
+      "name": "approval:http",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "approval:live",
+      "pass": true,
+      "detail": {
+        "mode": "live",
+        "provider": "ethereum-rpc.publicnode.com",
+        "fetchedAt": "2026-09-12T04:04:26.637Z"
+      }
+    },
+    {
+      "name": "approval:hash",
+      "pass": true,
+      "detail": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0"
+    },
+    {
+      "name": "approval:status",
+      "pass": true,
+      "detail": "success"
+    },
+    {
+      "name": "approval:fee",
+      "pass": true,
+      "detail": {
+        "expected": "0.000005354028963866",
+        "actual": "0.000005354028963866"
+      }
+    },
+    {
+      "name": "approval:ai",
+      "pass": true,
+      "detail": {
+        "mode": "ai",
+        "label": "로컬 Codex · 실제 AI 해설",
+        "text": "승인은 토큰을 전송하는 작업과 구분되며, 당시 다른 주체가 토큰을 사용할 수 있는 한도를 설정하는 작업입니다. 이 승인 작업은 성공 상태로 블록에 포함되었지만, 최종 확정된 상태를 뜻하지는 않습니다.",
+        "provider": "local-codex-cli",
+        "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+        "generatedAt": "2026-09-12T04:04:33.143Z",
+        "cached": false
+      }
+    },
+    {
+      "name": "approval amount",
+      "pass": true,
+      "detail": {
+        "type": "approval",
+        "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+        "to": "0x0000000000001ff3684f28c67538d4d072c22734",
+        "rawAmount": "1000000",
+        "logIndex": 439,
+        "symbol": "USDC",
+        "decimals": 6,
+        "amount": "1",
+        "amountUnit": "USDC",
+        "metadataVerified": true,
+        "direction": "나감",
+        "evidenceId": "log-439",
+        "unlimited": false
+      }
+    },
+    {
+      "name": "approval not transfer",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "name": "historical approval caveat",
+      "pass": true,
+      "detail": [
+        "표시한 토큰 이동은 영수증의 표준 이벤트를 해석한 값입니다. 모든 자산의 실제 잔액 변화나 토큰의 정상 동작을 보장하지 않습니다.",
+        "내부 ETH 이동·스왑 경로·가격·NFT·비표준 토큰은 해석 범위에 포함되지 않습니다.",
+        "승인은 해당 거래 시점에 설정된 토큰 사용 한도입니다. 현재 허용량이나 실제 사용 여부는 별도로 조회해야 합니다."
+      ]
+    },
+    {
+      "name": "failed:http",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "failed:live",
+      "pass": true,
+      "detail": {
+        "mode": "live",
+        "provider": "ethereum-rpc.publicnode.com",
+        "fetchedAt": "2026-09-12T04:04:34.282Z"
+      }
+    },
+    {
+      "name": "failed:hash",
+      "pass": true,
+      "detail": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4"
+    },
+    {
+      "name": "failed:status",
+      "pass": true,
+      "detail": "failed"
+    },
+    {
+      "name": "failed:fee",
+      "pass": true,
+      "detail": {
+        "expected": "0.0009579974022",
+        "actual": "0.0009579974022"
+      }
+    },
+    {
+      "name": "failed:ai",
+      "pass": true,
+      "detail": {
+        "mode": "ai",
+        "label": "로컬 Codex · 실제 AI 해설",
+        "text": "이 거래는 스마트 계약의 기능을 호출하는 상호작용입니다. 블록에 포함되었지만 실행에 실패해 실행 중 발생한 상태 변경은 되돌려졌습니다.",
+        "provider": "local-codex-cli",
+        "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+        "generatedAt": "2026-09-12T04:04:39.703Z",
+        "cached": false
+      }
+    },
+    {
+      "name": "failed no movements",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "invalid hash",
+      "pass": true,
+      "detail": {
+        "status": 400,
+        "body": {
+          "error": "0x로 시작하는 66자리 거래 해시가 필요합니다."
+        }
+      }
+    },
+    {
+      "name": "unsupported explorer",
+      "pass": true,
+      "detail": {
+        "status": 400,
+        "body": {
+          "error": "Ethereum의 etherscan.io 또는 eth.blockscout.com 거래 링크만 지원합니다."
+        }
+      }
+    },
+    {
+      "name": "absent transaction",
+      "pass": true,
+      "detail": {
+        "status": 200,
+        "body": {
+          "hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "chain": "Ethereum Mainnet",
+          "status": "not_found",
+          "confidence": "unknown",
+          "category": "unknown",
+          "summary": "이 거래를 찾지 못했습니다.",
+          "transfers": [],
+          "approvals": [],
+          "evidence": [],
+          "fee": null,
+          "finality": {
+            "state": "unknown",
+            "label": "포함 여부 미확인"
+          },
+          "limitations": [
+            "해시와 네트워크를 확인해 주세요. 전파 중인 거래는 나중에 조회될 수 있습니다."
+          ],
+          "source": {
+            "mode": "live",
+            "provider": "Ethereum RPC",
+            "fetchedAt": "2026-09-12T04:04:41.966Z"
+          },
+          "explanation": {
+            "mode": "rules",
+            "label": "규칙 기반 설명",
+            "text": "입력한 거래 해시가 Ethereum에 존재하는지 탐색기에서 확인할 수 있습니다.",
+            "reason": "해석할 수 있는 사실이 충분하지 않습니다."
+          }
+        }
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "kind": "erc20-transfer",
+      "hash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "durationMs": 9910,
+      "mode": "ai",
+      "summary": "1607 USDC이 관측되었습니다."
+    },
+    {
+      "kind": "eth-transfer",
+      "hash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "durationMs": 12774,
+      "mode": "ai",
+      "summary": "44.69511 ETH이 관측되었습니다."
+    },
+    {
+      "kind": "approval",
+      "hash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "durationMs": 7844,
+      "mode": "ai",
+      "summary": "토큰을 보낸 것이 아니라, 사용 권한을 설정한 거래입니다."
+    },
+    {
+      "kind": "failed",
+      "hash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "durationMs": 6558,
+      "mode": "ai",
+      "summary": "거래 실행이 실패했습니다. 수수료와 원본 오류를 확인하세요."
+    }
+  ],
+  "passed": 35,
+  "total": 35
+}

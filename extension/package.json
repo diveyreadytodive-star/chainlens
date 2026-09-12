@@ -1,0 +1,10 @@
+{
+  "name": "chainlens-extension",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run test && node --check service-worker.js && node --check core/input-parser.js && node --check core/api-client.js && node --check core/state.js && node --check content/quick-receipt.js && node --check sidepanel/index.js && node --check sidepanel/tab-state.js && node --check sidepanel/operation-gate.js",
+    "package": "npm run check && node scripts/package.mjs"
+  }
+}

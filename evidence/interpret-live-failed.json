@@ -1,0 +1,115 @@
+{
+  "hash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+  "chain": "Ethereum Mainnet",
+  "status": "failed",
+  "confidence": "confirmed",
+  "category": "contract_interaction",
+  "summary": "거래 실행이 실패했습니다. 수수료와 원본 오류를 확인하세요.",
+  "perspective": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+  "from": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+  "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "transfers": [],
+  "approvals": [],
+  "fee": {
+    "amount": "0.0009579974022",
+    "executionAmount": "0.0009579974022",
+    "blobAmount": null,
+    "unit": "ETH",
+    "gasUsed": "900000",
+    "effectiveGasPriceWei": "1064441558",
+    "payer": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+    "complete": true,
+    "evidenceId": "receipt"
+  },
+  "evidence": [
+    {
+      "id": "transaction",
+      "label": "거래 원본 · 보낸 주소 / 받는 주소 / ETH 값",
+      "url": "https://etherscan.io/tx/0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "fields": [
+        "transaction.from",
+        "transaction.to",
+        "transaction.value",
+        "transaction.input"
+      ]
+    },
+    {
+      "id": "receipt",
+      "label": "실행 영수증 · 실행 상태 / 수수료",
+      "url": "https://etherscan.io/tx/0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "fields": [
+        "receipt.status",
+        "receipt.gasUsed",
+        "receipt.effectiveGasPrice"
+      ]
+    }
+  ],
+  "limitations": [
+    "거래 실행이 되돌려졌습니다. 의도한 자산 이동이나 권한 설정이 완료된 것으로 표시하지 않습니다. 네트워크 수수료는 발생할 수 있습니다.",
+    "표시한 토큰 이동은 영수증의 표준 이벤트를 해석한 값입니다. 모든 자산의 실제 잔액 변화나 토큰의 정상 동작을 보장하지 않습니다.",
+    "내부 ETH 이동·스왑 경로·가격·NFT·비표준 토큰은 해석 범위에 포함되지 않습니다."
+  ],
+  "finality": {
+    "state": "included",
+    "label": "블록 포함 · 최종 확정 미확인",
+    "blockNumber": "25958756",
+    "confirmations": "63"
+  },
+  "source": {
+    "mode": "live",
+    "provider": "ethereum-rpc.publicnode.com",
+    "fetchedAt": "2026-09-12T04:04:34.282Z"
+  },
+  "decodedLogCount": 0,
+  "unsupportedLogCount": 0,
+  "raw": {
+    "transaction": {
+      "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+      "blockNumber": "0x18c1964",
+      "blockTimestamp": "0x6aa4cc5f",
+      "from": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+      "gas": "0xdbba0",
+      "gasPrice": "0x3f7216d6",
+      "maxFeePerGas": "0x3f7216d6",
+      "maxPriorityFeePerGas": "0x3f7216d6",
+      "hash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "input": "0xa9059cbb0000000000000000000000005015d7c947b782670d1fac71b749a5ba54ca9a450000000000000000000000000000000000000000000000000000000070b65ec0",
+      "nonce": "0x39",
+      "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "transactionIndex": "0x3e",
+      "value": "0x0",
+      "type": "0x2",
+      "accessList": [],
+      "chainId": "0x1",
+      "v": "0x1",
+      "r": "0xeab0fec1be74ec08bef48c4f8477101e23d20e92163453a92a16af1f388b1644",
+      "s": "0x2397152beeaa777b0c3f1053e3686fb434fff96aeaad3ccd3c565cbeea319d9b",
+      "yParity": "0x1"
+    },
+    "receipt": {
+      "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+      "blockNumber": "0x18c1964",
+      "contractAddress": null,
+      "cumulativeGasUsed": "0x5a8cdb",
+      "effectiveGasPrice": "0x3f7216d6",
+      "from": "0x8c39763ada6bfe7a2aa64ff8dae9b37fba7f6beb",
+      "gasUsed": "0xdbba0",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "status": "0x0",
+      "to": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+      "transactionHash": "0x14259e02e6568e0c82cace2bca583a9d102ac62f76963ee340baf3f6ee587fa4",
+      "transactionIndex": "0x3e",
+      "type": "0x2"
+    }
+  },
+  "explanation": {
+    "mode": "ai",
+    "label": "로컬 Codex · 실제 AI 해설",
+    "text": "이 거래는 스마트 계약의 기능을 호출하는 상호작용입니다. 블록에 포함되었지만 실행에 실패해 실행 중 발생한 상태 변경은 되돌려졌습니다.",
+    "provider": "local-codex-cli",
+    "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+    "generatedAt": "2026-09-12T04:04:39.703Z",
+    "cached": false
+  }
+}

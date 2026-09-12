@@ -1,0 +1,15 @@
+{
+  "verifiedAt": "2026-09-12T10:27:03.298Z",
+  "endpoint": "local ChainLens /api/interpret",
+  "transactionHash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+  "transactionStatus": "success",
+  "category": "token_transfer",
+  "model": "openai/gpt-oss-20b",
+  "provider": "Groq",
+  "explanationMode": "ai",
+  "explanationLabel": "AI 용어 해설",
+  "cached": false,
+  "guardPassed": true,
+  "secretPersisted": false,
+  "notes": "API key was injected only into the running server process. No key value is stored in this evidence file, source, extension, ZIP, response, or application log."
+}

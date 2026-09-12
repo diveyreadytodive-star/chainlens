@@ -1,0 +1,129 @@
+{
+  "hash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+  "chain": "Ethereum Mainnet",
+  "status": "success",
+  "confidence": "confirmed",
+  "category": "eth_transfer",
+  "summary": "44.69511 ETH이 관측되었습니다.",
+  "perspective": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+  "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+  "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+  "transfers": [
+    {
+      "type": "native",
+      "symbol": "ETH",
+      "amount": "44.69511",
+      "amountUnit": "ETH",
+      "rawAmount": "44695110000000000000",
+      "decimals": 18,
+      "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+      "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+      "direction": "나감",
+      "evidenceId": "transaction",
+      "metadataVerified": true
+    }
+  ],
+  "approvals": [],
+  "fee": {
+    "amount": "0.000043715202657",
+    "executionAmount": "0.000043715202657",
+    "blobAmount": null,
+    "unit": "ETH",
+    "gasUsed": "21000",
+    "effectiveGasPriceWei": "2081676317",
+    "payer": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+    "complete": true,
+    "evidenceId": "receipt"
+  },
+  "evidence": [
+    {
+      "id": "transaction",
+      "label": "거래 원본 · 보낸 주소 / 받는 주소 / ETH 값",
+      "url": "https://etherscan.io/tx/0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "fields": [
+        "transaction.from",
+        "transaction.to",
+        "transaction.value",
+        "transaction.input"
+      ]
+    },
+    {
+      "id": "receipt",
+      "label": "실행 영수증 · 실행 상태 / 수수료",
+      "url": "https://etherscan.io/tx/0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "fields": [
+        "receipt.status",
+        "receipt.gasUsed",
+        "receipt.effectiveGasPrice"
+      ]
+    }
+  ],
+  "limitations": [
+    "표시한 토큰 이동은 영수증의 표준 이벤트를 해석한 값입니다. 모든 자산의 실제 잔액 변화나 토큰의 정상 동작을 보장하지 않습니다.",
+    "내부 ETH 이동·스왑 경로·가격·NFT·비표준 토큰은 해석 범위에 포함되지 않습니다.",
+    "ETH 값은 최상위 호출에 보낸 금액입니다. 입력 데이터가 없어도 내부 반환·재전송이 있을 수 있으며, 표시 값은 실제 잔액의 순변화가 아닙니다."
+  ],
+  "finality": {
+    "state": "included",
+    "label": "블록 포함 · 최종 확정 미확인",
+    "blockNumber": "25958756",
+    "confirmations": "61"
+  },
+  "source": {
+    "mode": "live",
+    "provider": "ethereum-rpc.publicnode.com",
+    "fetchedAt": "2026-09-12T04:04:13.599Z"
+  },
+  "decodedLogCount": 0,
+  "unsupportedLogCount": 0,
+  "raw": {
+    "transaction": {
+      "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+      "blockNumber": "0x18c1964",
+      "blockTimestamp": "0x6aa4cc5f",
+      "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+      "gas": "0x33450",
+      "gasPrice": "0x7c13dc1d",
+      "maxFeePerGas": "0x74e2f65200",
+      "maxPriorityFeePerGas": "0x78a3ca00",
+      "hash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "input": "0x",
+      "nonce": "0x56ce",
+      "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+      "transactionIndex": "0x5",
+      "value": "0x26c44edbd7b026000",
+      "type": "0x2",
+      "accessList": [],
+      "chainId": "0x1",
+      "v": "0x0",
+      "r": "0x67eb7b1aa4bc6f34bafbcd2a2cac9862112b3e130eaa43bcd3abf7e79cb64317",
+      "s": "0x363c3fe1000c1e066229ebba8e0528de24c7998c1aea0c899f16cbc5b4a8eee7",
+      "yParity": "0x0"
+    },
+    "receipt": {
+      "blockHash": "0xde7f783c454a7ceb5a68e3123a578ae90dc7a99b5504a33904fdfe9d28c72d30",
+      "blockNumber": "0x18c1964",
+      "contractAddress": null,
+      "cumulativeGasUsed": "0x88330",
+      "effectiveGasPrice": "0x7c13dc1d",
+      "from": "0x0003b5aa5e30e97fcc596bb5d0f3a75255e08d4e",
+      "gasUsed": "0x5208",
+      "logs": [],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "status": "0x1",
+      "to": "0x68d84ae9c13cf714c70cd9e8bda169a4935ec024",
+      "transactionHash": "0x797bbce143a771a99ad76a5bf35deddf2c92713da80cdfd6d80d9046e335d115",
+      "transactionIndex": "0x5",
+      "type": "0x2"
+    }
+  },
+  "explanation": {
+    "mode": "ai",
+    "label": "로컬 Codex · 실제 AI 해설",
+    "text": "기본 자산 전송은 네트워크의 기본 자산을 다른 계정으로 보내는 작업이에요. 성공 상태로 블록에 포함되었다는 것은 실행이 완료되어 기록되었다는 뜻이며, 최종 확정과는 구분돼요.",
+    "provider": "local-codex-cli",
+    "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+    "generatedAt": "2026-09-12T04:04:25.298Z",
+    "cached": false
+  }
+}

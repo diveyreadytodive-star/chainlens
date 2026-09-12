@@ -1,0 +1,53 @@
+{
+  "time": "2026-09-12T04:09:48.457Z",
+  "passed": 4,
+  "total": 4,
+  "checks": [
+    {
+      "name": "RPC unavailable returns503",
+      "pass": true,
+      "result": {
+        "status": 503,
+        "body": {
+          "error": "현재 공개 RPC에 연결할 수 없습니다. 잠시 후 다시 조회하거나, 출처가 표시된 저장 예제를 이용해 주세요."
+        }
+      }
+    },
+    {
+      "name": "stored data without AI clearly uses rules",
+      "pass": true,
+      "result": {
+        "status": 200,
+        "source": {
+          "mode": "stored",
+          "provider": "https://ethereum-rpc.publicnode.com",
+          "fetchedAt": "2026-09-12T03:55:25.187Z",
+          "replayedAt": "2026-09-12T04:09:48.451Z"
+        },
+        "explanation": {
+          "mode": "rules",
+          "label": "규칙 기반 설명",
+          "text": "토큰 컨트랙트가 남긴 전송 이벤트에서 보낸 주소와 받는 주소를 읽었습니다. 이벤트만으로 모든 잔액 변화를 알 수는 없습니다.",
+          "reason": "LLM 연결이 설정되지 않아 검증된 규칙으로 설명합니다."
+        }
+      }
+    },
+    {
+      "name": "foreign Origin denied",
+      "pass": true,
+      "result": {
+        "status": 403,
+        "body": {
+          "error": "요청 출처가 허용되지 않습니다."
+        }
+      }
+    },
+    {
+      "name": "foreign Host denied",
+      "pass": true,
+      "result": {
+        "status": 403
+      }
+    }
+  ]
+}

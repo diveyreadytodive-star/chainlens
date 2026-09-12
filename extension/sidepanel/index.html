@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChainLens</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="app-header"><div><p class="eyebrow">ETHEREUM MAINNET</p><h1>ChainLens</h1></div><span id="state-dot" aria-label="상태"></span></header>
+      <form id="input-form" novalidate>
+        <label for="transaction-input">거래 해시 또는 지원 탐색기 링크</label>
+        <textarea id="transaction-input" rows="3" placeholder="0x… 또는 etherscan.io/tx/…" spellcheck="false"></textarea>
+        <button id="interpret-button" type="submit">거래 해석</button>
+      </form>
+      <p id="message" class="message" hidden></p>
+      <section id="loading" class="card loading" hidden aria-live="polite">원본 거래와 영수증을 확인하고 있습니다.</section>
+      <section id="result" hidden></section>
+      <section id="empty" class="empty"><h2>거래를 이해 가능한 영수증으로</h2><p>Ethereum 거래 해시나 Etherscan·Ethereum Blockscout의 <code>/tx/</code> 링크를 입력하세요.</p><p>자산 이동, Approval, 수수료와 원본 근거를 구분해 보여 드립니다.</p></section>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

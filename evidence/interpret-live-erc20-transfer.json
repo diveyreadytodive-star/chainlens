@@ -1,0 +1,158 @@
+{
+  "hash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+  "chain": "Ethereum Mainnet",
+  "status": "success",
+  "confidence": "confirmed",
+  "category": "token_transfer",
+  "summary": "1607 USDC이 관측되었습니다.",
+  "perspective": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+  "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+  "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "transfers": [
+    {
+      "type": "transfer",
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+      "to": "0x5fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa",
+      "rawAmount": "1607000000",
+      "logIndex": 301,
+      "symbol": "USDC",
+      "decimals": 6,
+      "amount": "1607",
+      "amountUnit": "USDC",
+      "metadataVerified": true,
+      "direction": "나감",
+      "evidenceId": "log-301",
+      "unlimited": false
+    }
+  ],
+  "approvals": [],
+  "fee": {
+    "amount": "0.0000028880025478",
+    "executionAmount": "0.0000028880025478",
+    "blobAmount": null,
+    "unit": "ETH",
+    "gasUsed": "45160",
+    "effectiveGasPriceWei": "63950455",
+    "payer": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+    "complete": true,
+    "evidenceId": "receipt"
+  },
+  "evidence": [
+    {
+      "id": "transaction",
+      "label": "거래 원본 · 보낸 주소 / 받는 주소 / ETH 값",
+      "url": "https://etherscan.io/tx/0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "fields": [
+        "transaction.from",
+        "transaction.to",
+        "transaction.value",
+        "transaction.input"
+      ]
+    },
+    {
+      "id": "receipt",
+      "label": "실행 영수증 · 실행 상태 / 수수료",
+      "url": "https://etherscan.io/tx/0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "fields": [
+        "receipt.status",
+        "receipt.gasUsed",
+        "receipt.effectiveGasPrice"
+      ]
+    },
+    {
+      "id": "log-301",
+      "label": "Transfer 이벤트 · 로그 301",
+      "url": "https://etherscan.io/tx/0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db#eventlog",
+      "fields": [
+        "receipt.logs[logIndex=301].topics",
+        "receipt.logs[logIndex=301].data"
+      ],
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    }
+  ],
+  "limitations": [
+    "표시한 토큰 이동은 영수증의 표준 이벤트를 해석한 값입니다. 모든 자산의 실제 잔액 변화나 토큰의 정상 동작을 보장하지 않습니다.",
+    "내부 ETH 이동·스왑 경로·가격·NFT·비표준 토큰은 해석 범위에 포함되지 않습니다."
+  ],
+  "finality": {
+    "state": "included",
+    "label": "블록 포함 · 최종 확정 미확인",
+    "blockNumber": "25958772",
+    "confirmations": "45"
+  },
+  "source": {
+    "mode": "live",
+    "provider": "ethereum-rpc.publicnode.com",
+    "fetchedAt": "2026-09-12T04:04:03.966Z"
+  },
+  "decodedLogCount": 1,
+  "unsupportedLogCount": 0,
+  "raw": {
+    "transaction": {
+      "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+      "blockNumber": "0x18c1974",
+      "blockTimestamp": "0x6aa4cd1f",
+      "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+      "gas": "0xb1e4",
+      "gasPrice": "0x3cfce77",
+      "maxFeePerGas": "0x746a528800",
+      "maxPriorityFeePerGas": "0x673b14",
+      "hash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "input": "0xa9059cbb0000000000000000000000005fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa000000000000000000000000000000000000000000000000000000005fc8dfc0",
+      "nonce": "0xe77ad",
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "transactionIndex": "0x6a",
+      "value": "0x0",
+      "type": "0x2",
+      "accessList": [],
+      "chainId": "0x1",
+      "v": "0x1",
+      "r": "0xd6d00c275f19e0e7d1580914085e266eb1272ce5ef0363f8efac84d4e64ea4",
+      "s": "0x2b0bd1d00f2b6dfd2f0812601fc86ab50a8506cd93e94e18bee4e2c971ec0e8",
+      "yParity": "0x1"
+    },
+    "receipt": {
+      "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+      "blockNumber": "0x18c1974",
+      "contractAddress": null,
+      "cumulativeGasUsed": "0xe19f02",
+      "effectiveGasPrice": "0x3cfce77",
+      "from": "0xbbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+      "gasUsed": "0xb068",
+      "logs": [
+        {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x000000000000000000000000bbd0d4d067d5af2065b1b6fd936d93237ae1c56c",
+            "0x0000000000000000000000005fedc50871b8d6ed9bfbc689d6c7b4b3194ddefa"
+          ],
+          "data": "0x000000000000000000000000000000000000000000000000000000005fc8dfc0",
+          "blockNumber": "0x18c1974",
+          "transactionHash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+          "transactionIndex": "0x6a",
+          "blockHash": "0x2f3bdde5dcdd3081fa3533019b3b7640abb2c935ec616e0dc999cd086d0195c6",
+          "blockTimestamp": "0x6aa4cd1f",
+          "logIndex": "0x12d",
+          "removed": false
+        }
+      ],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000008000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000010000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000002000400000000000000000000000000000000000000000000800400000000000000002000000000000000000000000000000000000000000000000002",
+      "status": "0x1",
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "transactionHash": "0x90a8e0720a42cfd0e0293f5b1122bbee98018a094f46448504d78cdbf0ac02db",
+      "transactionIndex": "0x6a",
+      "type": "0x2"
+    }
+  },
+  "explanation": {
+    "mode": "ai",
+    "label": "로컬 Codex · 실제 AI 해설",
+    "text": "토큰 전송은 블록체인에서 토큰을 다른 계정으로 보내는 동작이에요. 이 거래는 블록에 포함되어 성공으로 처리되었어요.",
+    "provider": "local-codex-cli",
+    "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+    "generatedAt": "2026-09-12T04:04:12.522Z",
+    "cached": false
+  }
+}

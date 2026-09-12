@@ -1,0 +1,13 @@
+{
+  "name": "chainlens-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node --check server.mjs && node --check lib/interpreter.mjs && node --check lib/ai.mjs && node --check lib/service.mjs && node --check api/_http.mjs && node --check api/health.mjs && node --check api/examples.mjs && node --check api/interpret.mjs && node --check public/app.js",
+    "check": "npm run build && npm test"
+  }
+}

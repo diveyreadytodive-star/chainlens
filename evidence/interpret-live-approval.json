@@ -1,0 +1,159 @@
+{
+  "hash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+  "chain": "Ethereum Mainnet",
+  "status": "success",
+  "confidence": "confirmed",
+  "category": "approval",
+  "summary": "토큰을 보낸 것이 아니라, 사용 권한을 설정한 거래입니다.",
+  "perspective": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+  "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+  "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "transfers": [],
+  "approvals": [
+    {
+      "type": "approval",
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+      "to": "0x0000000000001ff3684f28c67538d4d072c22734",
+      "rawAmount": "1000000",
+      "logIndex": 439,
+      "symbol": "USDC",
+      "decimals": 6,
+      "amount": "1",
+      "amountUnit": "USDC",
+      "metadataVerified": true,
+      "direction": "나감",
+      "evidenceId": "log-439",
+      "unlimited": false
+    }
+  ],
+  "fee": {
+    "amount": "0.000005354028963866",
+    "executionAmount": "0.000005354028963866",
+    "blobAmount": null,
+    "unit": "ETH",
+    "gasUsed": "55486",
+    "effectiveGasPriceWei": "96493331",
+    "payer": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+    "complete": true,
+    "evidenceId": "receipt"
+  },
+  "evidence": [
+    {
+      "id": "transaction",
+      "label": "거래 원본 · 보낸 주소 / 받는 주소 / ETH 값",
+      "url": "https://etherscan.io/tx/0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "fields": [
+        "transaction.from",
+        "transaction.to",
+        "transaction.value",
+        "transaction.input"
+      ]
+    },
+    {
+      "id": "receipt",
+      "label": "실행 영수증 · 실행 상태 / 수수료",
+      "url": "https://etherscan.io/tx/0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "fields": [
+        "receipt.status",
+        "receipt.gasUsed",
+        "receipt.effectiveGasPrice"
+      ]
+    },
+    {
+      "id": "log-439",
+      "label": "Approval 이벤트 · 로그 439",
+      "url": "https://etherscan.io/tx/0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0#eventlog",
+      "fields": [
+        "receipt.logs[logIndex=439].topics",
+        "receipt.logs[logIndex=439].data"
+      ],
+      "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
+    }
+  ],
+  "limitations": [
+    "표시한 토큰 이동은 영수증의 표준 이벤트를 해석한 값입니다. 모든 자산의 실제 잔액 변화나 토큰의 정상 동작을 보장하지 않습니다.",
+    "내부 ETH 이동·스왑 경로·가격·NFT·비표준 토큰은 해석 범위에 포함되지 않습니다.",
+    "승인은 해당 거래 시점에 설정된 토큰 사용 한도입니다. 현재 허용량이나 실제 사용 여부는 별도로 조회해야 합니다."
+  ],
+  "finality": {
+    "state": "included",
+    "label": "블록 포함 · 최종 확정 미확인",
+    "blockNumber": "25958770",
+    "confirmations": "49"
+  },
+  "source": {
+    "mode": "live",
+    "provider": "ethereum-rpc.publicnode.com",
+    "fetchedAt": "2026-09-12T04:04:26.637Z"
+  },
+  "decodedLogCount": 1,
+  "unsupportedLogCount": 0,
+  "raw": {
+    "transaction": {
+      "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+      "blockNumber": "0x18c1972",
+      "blockTimestamp": "0x6aa4cd07",
+      "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+      "gas": "0x107db",
+      "gasPrice": "0x5c05f13",
+      "maxFeePerGas": "0x69524d4",
+      "maxPriorityFeePerGas": "0x2794d36",
+      "hash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "input": "0x095ea7b30000000000000000000000000000000000001ff3684f28c67538d4d072c2273400000000000000000000000000000000000000000000000000000000000f4240",
+      "nonce": "0x182",
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "transactionIndex": "0x73",
+      "value": "0x0",
+      "type": "0x2",
+      "accessList": [],
+      "chainId": "0x1",
+      "v": "0x1",
+      "r": "0xfb0bd40e9948fff7332726494faed85776ea9156cd55e6ac306c9f41b7132da7",
+      "s": "0x6babe5b7114f9652f3c501bddb26ca6b1b6130c03ac38a7d14263b70a69aa82f",
+      "yParity": "0x1"
+    },
+    "receipt": {
+      "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+      "blockNumber": "0x18c1972",
+      "contractAddress": null,
+      "cumulativeGasUsed": "0xe4a0ac",
+      "effectiveGasPrice": "0x5c05f13",
+      "from": "0x04940c3800275fe84f615ab07bc723eaa9a1a00f",
+      "gasUsed": "0xd8be",
+      "logs": [
+        {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "topics": [
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "0x00000000000000000000000004940c3800275fe84f615ab07bc723eaa9a1a00f",
+            "0x0000000000000000000000000000000000001ff3684f28c67538d4d072c22734"
+          ],
+          "data": "0x00000000000000000000000000000000000000000000000000000000000f4240",
+          "blockNumber": "0x18c1972",
+          "transactionHash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+          "transactionIndex": "0x73",
+          "blockHash": "0xd52254ceb1957bd1dee7f6fca7cc59dd019a408c2c76a96fab6cfae3faa98ae6",
+          "blockTimestamp": "0x6aa4cd07",
+          "logIndex": "0x1b7",
+          "removed": false
+        }
+      ],
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000008000000001000000000000000000000000000000000000000000000000000400000000008000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000100000000000020000000000200000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000010000010000000000000000000000000000000000000000000000000000000",
+      "status": "0x1",
+      "to": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      "transactionHash": "0x7aead74bd22799ef23780f4abbe697dc7a87d0cc6d468cf8b6f50029e1ee51f0",
+      "transactionIndex": "0x73",
+      "type": "0x2"
+    }
+  },
+  "explanation": {
+    "mode": "ai",
+    "label": "로컬 Codex · 실제 AI 해설",
+    "text": "승인은 토큰을 전송하는 작업과 구분되며, 당시 다른 주체가 토큰을 사용할 수 있는 한도를 설정하는 작업입니다. 이 승인 작업은 성공 상태로 블록에 포함되었지만, 최종 확정된 상태를 뜻하지는 않습니다.",
+    "provider": "local-codex-cli",
+    "guard": "수치·주소·일부 모순 표현 제한; 전체 의미 정확성을 증명하지 않음",
+    "generatedAt": "2026-09-12T04:04:33.143Z",
+    "cached": false
+  }
+}

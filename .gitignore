@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+.vercel/
+**/.vercel/
+node_modules/
+**/node_modules/
+.build/
+.slides-build/
+tmp/
+*.log
