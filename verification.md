@@ -97,6 +97,6 @@ OS 전면창 불일치로 저장된 PNG가 실제 확장 화면을 담지 못했
 - PPTX와 PDF는 각각 정확히 10장/10쪽이며 모든 페이지를 개별 렌더했다. 한글 깨짐·잘림·겹침은 발견하지 못했다.
 - 슬라이드 3·8·9의 표와 슬라이드 6의 아키텍처는 native 편집 객체다.
 - PowerPoint 데스크톱에서 여는 검사는 수행하지 않았다.
-- PPTX SHA-256: f43c79471a33c4e3a71591bfc7cea6f163a022a567c5cc404e2896468babd912
-- PDF SHA-256: 15064a6a3ea33af807c22cee4045a60ce6d2d0ef3c5a105d9295cfdcb17ad0ed
+- PPTX SHA-256: ea922f8855c064b159af59de4bc30bf275d7360432a71e93b4b1633870f6a60a
+- PDF SHA-256: 180c870a21910d8f8b6adc635e36fe03d322179ed4f17e8bff4305fdebd56375
 - 번들 LibreOffice가 새 PPTX의 Apple SD Gothic Neo를 잘못 대체해 한글이 누락된 PDF는 폐기했다. 최종 PDF는 검증된 1920×1080 슬라이드 렌더를 960×540pt 10쪽에 배치해 PPTX와 시각적으로 일치시켰다.
